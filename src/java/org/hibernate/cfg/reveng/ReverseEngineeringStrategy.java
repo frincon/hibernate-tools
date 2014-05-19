@@ -196,5 +196,7 @@ public interface ReverseEngineeringStrategy {
 
 	public AssociationInfo foreignKeyToAssociationInfo(ForeignKey foreignKey);
 	public AssociationInfo foreignKeyToInverseAssociationInfo(ForeignKey foreignKey);
+
+	public boolean excludePackage(String packageName);
 		
 }
