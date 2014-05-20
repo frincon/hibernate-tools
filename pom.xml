@@ -48,12 +48,14 @@
 			<email>max@hibernate.org</email>
 			<url>http://in.relation.to/Bloggers/Max</url>
 		</developer>
-		<developer>
-			<id>frincon</id>
+	</developers>
+	
+	<contributors>	
+		<contributor>
 			<name>Fernando Rincon</name>
 			<email>frm.rincon@gmail.com</email>
-		</developer>
-	</developers>
+		</contributor>
+	</contributors>
 
 	<properties>
 		<hibernateversion>4.0.0.Final</hibernateversion>
