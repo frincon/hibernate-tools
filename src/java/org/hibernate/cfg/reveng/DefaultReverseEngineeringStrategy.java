@@ -355,6 +355,10 @@ public class DefaultReverseEngineeringStrategy implements ReverseEngineeringStra
 		return null;
 	}
 
+	public boolean excludePackage(String packageName) {
+		return false;
+	}
+
 	
 	
 }

@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.JDBCMetaDataConfiguration;
 import org.hibernate.mapping.Component;
 import org.hibernate.mapping.PersistentClass;
 import org.hibernate.tool.hbm2x.pojo.ComponentPOJOClass;
@@ -40,7 +41,16 @@ public class GenericExporter extends AbstractExporter {
 				Map additionalContext = new HashMap();
 				while ( iterator.hasNext() ) {					
 					POJOClass element = (POJOClass) iterator.next();
-					ge.exportPersistentClass( additionalContext, element );					
+					boolean exclude = false;
+					Configuration config = ge.getConfiguration();
+					if (config instanceof JDBCMetaDataConfiguration) {
+						JDBCMetaDataConfiguration jdbcConfig = (JDBCMetaDataConfiguration) config;
+						exclude = jdbcConfig.getReverseEngineeringStrategy().excludePackage(element.getPackageName());
+					}
+					if (!exclude) {
+						ge.exportPersistentClass(additionalContext, element);
+					}
+
 				}
 			}
 		});

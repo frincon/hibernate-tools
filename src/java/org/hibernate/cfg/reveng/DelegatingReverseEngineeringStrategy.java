@@ -153,5 +153,9 @@ public class DelegatingReverseEngineeringStrategy implements ReverseEngineeringS
 			boolean uniqueReference) {
 		return delegate==null?null:delegate.foreignKeyToInverseEntityName(keyname, fromTable, fromColumnNames, referencedTable, referencedColumnNames, uniqueReference);
 	}	
+
+       public boolean excludePackage(String packageName) {
+               return delegate == null ? false : delegate.excludePackage(packageName);
+       }
 	
 }

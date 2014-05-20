@@ -189,4 +189,9 @@ public class NoopReverseEngineeringStrategy implements ReverseEngineeringStrateg
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public boolean excludePackage(String packageName) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

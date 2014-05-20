@@ -487,6 +487,8 @@ public class EntityPOJOClass extends BasicPOJOClass {
 		if ( pkIsAlsoFk && oneToOne.getForeignKeyType().equals(ForeignKeyDirection.FOREIGN_KEY_FROM_PARENT) ){
 			AnnotationBuilder ab1 = AnnotationBuilder.createAnnotation( importType("javax.persistence.PrimaryKeyJoinColumn") );
 			buffer.append(ab1.getResult());
+		} else if ( !pkIsAlsoFk && oneToOne.getForeignKeyType().equals(ForeignKeyDirection.FOREIGN_KEY_FROM_PARENT) ){
+			buffer.append(generateJoinColumnsAnnotation(property, cfg));
 		}
 
 		return buffer.toString();
