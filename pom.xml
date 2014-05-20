@@ -9,9 +9,9 @@
 		<version>6</version>
 	</parent>
 
-	<groupId>org.hibernate</groupId>
+	<groupId>org.openeos.external.org.hibernate</groupId>
 	<artifactId>hibernate-tools</artifactId>
-	<version>4.0.0-CR1</version>
+	<version>4.0.0-CR1.OPENEOS.SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Hibernate Tools</name>
@@ -24,9 +24,9 @@
 	</issueManagement>
 
 	<scm>
-	  <connection>scm:git:git://github.com/hibernate/hibernate-tools.git</connection>
-	  <developerConnection>scm:git:git@github.com:hibernate/hibernate-tools.git</developerConnection>
-	  <url>http://github.com/hibernate/hibernate-tools</url>
+	  <connection>scm:git:git://github.com/frincon/hibernate-tools.git</connection>
+	  <developerConnection>scm:git:git@github.com:frincon/hibernate-tools.git</developerConnection>
+	  <url>http://github.com/frincon/hibernate-tools</url>
 	</scm>
 
 	<organization>
@@ -47,6 +47,11 @@
 			<name>Max Andersen</name>
 			<email>max@hibernate.org</email>
 			<url>http://in.relation.to/Bloggers/Max</url>
+		</developer>
+		<developer>
+			<id>frincon</id>
+			<name>Fernando Rincon</name>
+			<email>frm.rincon@gmail.com</name>
 		</developer>
 	</developers>
 
@@ -118,9 +123,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>ant</groupId>
+			<groupId>org.apache.ant</groupId>
 			<artifactId>ant</artifactId>
-			<version>1.6.5</version>
+			<version>1.8.1</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
